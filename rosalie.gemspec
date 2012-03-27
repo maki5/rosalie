@@ -1,9 +1,24 @@
-# Provide a simple gemspec so you can easily use your enginex
-# project in your rails apps through git.
+# -*- encoding: utf-8 -*-
+$:.push File.expand_path("../lib", __FILE__)
+require "rosalie/version"
+
 Gem::Specification.new do |s|
-  s.name = "rosalie"
-  s.summary = "Insert Rosalie summary."
-  s.description = "Insert Rosalie description."
-  s.files = Dir["{app,lib,config}/**/*"] + ["MIT-LICENSE", "Rakefile", "Gemfile", "README.rdoc"]
-  s.version = "0.0.1"
+  s.name        = "rosalie"
+  s.version     = Rosalie::VERSION
+  s.authors     = ["maki"]
+  s.email       = ["work.maki.5@gmail.com"]
+  s.homepage    = ""
+  s.summary     = "gem that allows users to message each over"
+  s.description = ""
+
+  s.rubyforge_project = "rosalie"
+
+  s.files         = `git ls-files`.split("\n")
+  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.require_paths = ["lib"]
+
+  # specify any dependencies here; for example:
+  # s.add_development_dependency "rspec"
+  # s.add_runtime_dependency "rest-client"
 end
