@@ -1,0 +1,2 @@
+module Rosalie
+end
