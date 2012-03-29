@@ -14,7 +14,7 @@ gem 'rosalie', :git => "git://github.com/maki5/rosalie.git"
 Then run:
 
 ````
-$ bundle update
+$ bundle install
 ````
 
 Run install script:
