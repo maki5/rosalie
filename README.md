@@ -46,13 +46,13 @@ end
 class Message < ActiveRecord::Base
   has_user
 end
-
+````
 
 ##Rosalie
 
 ### Send message
 ````ruby
-User.send_message([recipient1], "subject", "body")
+User.send_message([recipient], "subject", "body")
 ````
 
 ### Show sent messages by user
