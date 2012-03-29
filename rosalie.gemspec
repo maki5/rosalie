@@ -5,11 +5,11 @@ require "rosalie/version"
 Gem::Specification.new do |s|
   s.name        = "rosalie"
   s.version     = Rosalie::VERSION
-  s.authors     = ["maki"]
+  s.authors     = ["Ababii Alexandr"]
   s.email       = ["work.maki.5@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/maki5/rosalie"
   s.summary     = "gem that allows users to message each over"
-  s.description = ""
+  s.description = "A Rails engine that alows users to send messages to each other"
 
   s.rubyforge_project = "rosalie"
 
