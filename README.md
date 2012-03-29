@@ -54,10 +54,12 @@ end
 ````ruby
 User.send_message([recipient1], "subject", "body")
 ````
+
 ### Show sent messages by user
 ````ruby
 User.sent_messages
 ````
+
 ### Show recieved messages by user
 ````ruby
 User.recieved_messages
