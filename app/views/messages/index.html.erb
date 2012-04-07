@@ -1,0 +1,26 @@
+<div>
+  <%= render :partial => "navigation" %>
+</div>
+
+<div>
+  <% if @messages %>
+  <table>
+    <thead>
+      <th>N.</th>
+      <th>Subject</th>
+      <th>Author</th>
+    </thead>
+    </tbody>
+      <% @messages.each_with_index do |p, index| %>
+      <tr>
+        <td><%= index %></td>
+        <td><%= p.subject %></td>
+        <td><%= User.find(p.author_id).id %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <% else %>
+    <h3>you need to log in</h3>
+  <% end %>
+</div>
