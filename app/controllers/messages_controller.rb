@@ -18,7 +18,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new
     @message.recipient_id = params[:recipient_id]
-    @message.author_id = params[:author_id]
+    @message.author_id = current_user.id
     @message.subject = params[:subject]
     @message.body = params[:body]
 

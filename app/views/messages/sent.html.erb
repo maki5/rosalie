@@ -13,9 +13,10 @@
     </tbody>
       <% @messages.each_with_index do |p, index| %>
       <tr>
-        <td><%= index %></td>
+        <td><%= index + 1 %></td>
         <td><%= p.subject %></td>
         <td><%= User.find(p.recipient_id).id %></td>
+        <td><%= link_to "details", message_path(p.id) %></td>
       </tr>
       <% end %>
     </tbody>
