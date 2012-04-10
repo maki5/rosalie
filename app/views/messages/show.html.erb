@@ -1,0 +1,11 @@
+<div>
+  <%= render :partial => "navigation" %>
+</div>
+
+<div>
+  <p>from: <%= @message.author_id %></p>
+  <p>subject: <%= @message.subject %></p>
+  <p>body:<br/>
+    <%= @message.body %>
+  </p>
+</div>
