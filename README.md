@@ -20,7 +20,7 @@ $ bundle install
 Run install script:
 
 ````
-$ rails g rosalie
+$ rails g rosalie:install
 ````
 
 And don't forget to migrate you database:
@@ -63,6 +63,13 @@ User.sent_messages
 ### Show recieved messages by user
 ````ruby
 User.recieved_messages
+````
+
+##Views
+If you need views you can run views generator
+
+````
+$ rails g rosalie:views
 ````
 
 ## License

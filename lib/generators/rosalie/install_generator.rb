@@ -2,7 +2,7 @@ require 'rails/generators'
 require 'rails/generators/migration'
 require 'rails/generators/active_record'
 
-class RosalieGenerator < Rails::Generators::Base
+class Rosalie::InstallGenerator < Rails::Generators::Base
   include Rails::Generators::Migration
 
   def self.source_root
