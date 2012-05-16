@@ -78,6 +78,10 @@ You need to set up default url options for the mailer in each environment. Here 
 ```ruby
 config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 ```
+and default email
+```ruby
+ActionMailer::Base.default :from => 'default@development-server.com'
+```
 
 ## License
 MIT License. Copyright © 2012 Ababii Alexandr
