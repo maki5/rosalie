@@ -72,6 +72,13 @@ If you need views you can run views generator
 $ rails g rosalie:views
 ````
 
+###Action Mailer
+You need to set up default url options for the mailer in each environment. Here is the configuration for "config/environments/development.rb":
+
+```ruby
+config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+```
+
 ## License
 MIT License. Copyright © 2012 Ababii Alexandr
 

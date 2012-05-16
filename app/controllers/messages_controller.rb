@@ -23,6 +23,7 @@ class MessagesController < ApplicationController
     @message.body = params[:body]
 
     if @message.save
+      Mailer.deliver_message(@message.recipient).deliver
       redirect_to root_path
     end
   end
