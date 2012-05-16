@@ -20,10 +20,9 @@ module Rosalie
       end
 
       module InstanceMethods
-        def send_message(users, subject, body)
-          users.each do |p|
-            Message.create(:author => self, :recipient => p, :subject => subject, :body => body)
-          end
+        def send_message(user, subject, body)
+          Message.create(:author => self, :recipient => p, :subject => subject, :body => body)
+          Mailer.deliver_message(@message.recipient).deliver
         end
       end
 
