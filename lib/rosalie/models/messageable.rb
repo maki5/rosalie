@@ -24,6 +24,10 @@ module Rosalie
           Message.create(:author => self, :recipient => p, :subject => subject, :body => body)
           Mailer.deliver_message(@message.recipient).deliver
         end
+
+        def sent(user)
+          Message.where(:author_id => user.id)
+        end
       end
 
     end

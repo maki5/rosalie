@@ -4,7 +4,7 @@
 
 <div>
   <% if @message %>
-    <% form_tag messages_path, :metod => :post do %>
+    <%= form_tag messages_path, :metod => :post do %>
       <%= hidden_field_tag :recipient_id, @message.recipient_id %>
       Subject:<br/>
       <%= text_field_tag :subject %><br/>
