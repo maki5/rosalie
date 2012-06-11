@@ -1,17 +1,18 @@
-<div>
-  <%= render :partial => "navigation" %>
-</div>
+<%= render :partial => "navigation" %>
+
 
 <div>
   <% if @message %>
+  <pre>
     <%= form_tag messages_path, :metod => :post do %>
       <%= hidden_field_tag :recipient_id, @message.recipient_id %>
       Subject:<br/>
       <%= text_field_tag :subject %><br/>
       Body:<br/>
       <%= text_area_tag :body %><br/>
-      <%= submit_tag :submit %>
+      <%= submit_tag :submit, :class => "btn btn-primary" %>
     <% end %>
+  </pre>
   <% else %>
     You need to log in
   <% end %>
